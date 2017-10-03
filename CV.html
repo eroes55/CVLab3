@@ -2,63 +2,91 @@
 <html>
 <head>
 	<title>CV CR</title>
+	<link rel="stylesheet" type="text/css" href="CVCSS.css">
 </head>
 <body>
-	<h1><div align="center"><ins>Curriculum vitae</ins></div></h1><br>
+
+<SCRIPT LANGUAGE="JavaScript">
+var message="Welcome to my CV, have fun!";
+function clickIE() {if (document.all) {alert(message);return false;}}
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) {
+if (e.which==2||e.which==3) {alert(message);return false;}}}
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+document.oncontextmenu=new Function("return false")
+</script>
+
+
+	<Title1>Curriculum vitae</Title1><br>
 	<h1><strong><div align="center"> Cretiu Radu  <br><img src="https://i.imgur.com/voE5JLG.jpg" align="center" width="290" height="150" ></strong></h1></div>
-	<h3><strong><ins>Informatii personale:<ins></strong></h3>
+	<textCarac>Informatii personale:</textCarac>
+	
+	<text1>
 	<ul type="square">
-	<li><h4>Str. Viilor nr. 281, Galda de Jos, Romania</h4>	</li>
-	<li><h4>Ph:<em>+40762689942</em> </h4></li>
-	<li><h4>Email : eroes55@yahoo.com</h4></li>
-	<li><h4>Data Naşterii : 26/03/1996</h4></li>
-	<li><h4>Sex : Masculin</h4></li>
-	</ul>
-	<div align="left"><h2><strong><ins>Locul de muncă vizat/Domeniul ocupaţional:<br></ins></strong></h2>
-	<p align="100px"><strong><h3>Student</h3></strong></p>
-	</div>
-	<h2><ins>Experienta Profesionala</ins></h2>
+	<li>Str. Viilor nr. 281, Galda de Jos, Romania</li>
+	<li>Ph:<em>+40762689942</em></li>
+	<li>Email : eroes55@yahoo.com</li>
+	<li>Data Nasterii : 26/03/1996</li>
+	<li>Sex : Masculin</li>
+	</ul></text1>
+
+	<textCarac>Locul de munca vizat/Domeniul ocupational:</textCarac><br>
+	<br>
+	<textSub>Student</textSub>
+	<br><br>
+	<textCarac>Experienta Profesionala</textCarac>
 	<br>
 	<dl>
-		<dt><h3><strong>Perioada</strong></h3></dt>
+		<dt>Perioada</dt>
 		<dd>2015-2017</dd>
-		<dt><h3><strong>Functia sau postul ocupat</strong></h3></dt>
+		<dt>Functia sau postul ocupat</dt>
 		<dd>Student</dd>
-		<dt><h3><strong>Principale activitati si responsabilitati</h3></strong></dt>
+		<dt>Principale activitati si responsabilitati</dt>
 		<dd>Invatatul</dd>
-		<dt><h3><strong>Tipul de activitati sau sectorul de activitate</strong></h3></dt>
+		<dt>Tipul de activitati sau sectorul de activitate</dt>
 		<dd>Student CTI</dd>
 	</dl>
-	<div align="left"><h2><STRONG><ins>Educatie si formare:</ins></STRONG></h2>
+	<textCarac>Educatie si formare:</textCarac>
 	<dl>
-		<dt><h3>Clasele I-IV :</h3></dt>
+		<dt>Clasele I-IV :</dt>
 		<dd>Scoala Generala Ovidiu Hulea, Aiud(2003-2007)</dd>
-		<dt><h3>Clasele V-VIII:</h3></dt>
+		<dt>Clasele V-VIII:</dt>
 		<dd>Scoala Generala Nicolae Dragan, Galda de Jos(2007-2011)</dd>
-		<dt><h3>Clasele IX-XII:</h3></dt>
+		<dt>Clasele IX-XII:</dt>
 		<dd>Colegiul National Titu Maiorescu, Aiud (2011-2015)</dd>
-		<dt><h3>Facultate:</h3></dt>
+		<dt>Facultate:</dt>
 		<dd>Universitatea Tehnica Cluj Napoca, Faculatea de Calculatoare si Tehnologia Informatiei (2015-prezent)</dd>
+		<dt>Cursuri FastTrackIt</dt>
+		<dd>Web Developer (2017-prezent)</dd>
 	</dl>
-	<div><h2><strong><ins>Limba Straina Cunoscuta</ins></strong></h2></div>
-	<h2>Engleza</h2>
-	<dl><strong><h3>
+	<div><textCarac>Limba Straina Cunoscuta</textCarac></div>
+	<TextSub>Engleza</TextSub>
+	<dl>
 		<dt>Intelegere:</dt>
 		<dd>B2</dd>
 		<dt>Vorbire:</dt>
 		<dd>B2</dd>
 		<dt>Scris:</dt>
-		<dd>B1</dd></strong>
-	<h2>Franceza</h2>
-	<strong>Neincepator</strong></h3>
+		<dd>B1</dd>
 	</dl>
-	<div align="left"><h2><STRONG><ins>Hobby-uri</ins></STRONG></h2>
+	<TextSub>Franceza</TextSub>
+	<dl>
+		<dt>Intelegere:</dt>
+		<dd>A1</dd>
+		<dt>Vorbire:</dt>
+		<dd>A1</dd>
+		<dt>Scris:</dt>
+		<dd>A1</dd>
+	</dl>
+	<textCarac>Hobby-uri</textCarac>
 	<ul type="square">
-		<li><h3>Pictura/Desen</h3></li>
-		<li><h3>Inot</h3></li>
-		<li><h3>Biking</h3></li>
-		<li><h3>Gaming</h3></li>
-		<li><h3>Hiking</h3></li>
+		<li><a href="https://liquitex.com/Ink/">Pictura</a><a href="https://www.pinterest.com/explore/pencil-drawings/">/Desen</a></li>
+		<li><a href="https://en.wikipedia.org/wiki/Swimming_(sport)">Inot</a></li>
+		<li><a href="https://en.wikipedia.org/wiki/Mountain_biking">Biking</a></li>
+		<li><a href="https://gaming.youtube.com">Gaming</a></li>
+		<li><a href="https://en.wikipedia.org/wiki/Hiking">Hiking</a></li>
 	</ul>
 </body>
 </html>
