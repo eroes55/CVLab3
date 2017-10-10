@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tema4</title>
+	<style type="text/css">
+
+div{
+			font-family: "Comic Sans MS", cursive, sans-serif;
+			background-color: lightblue;
+			color: black;
+			font-size: 20px;
+			padding: 20px 20px 20px 20px;
+			border:  10px black solid;
+			margin-top: 20px;
+			margin-left: 30px;
+			margin-bottom: 20px;
+			border-width: 10px;
+			border-bottom-width: 5px;
+		}
+	</style>
+	
+</head>
+<body>
+<div>
+<script>
+	var NREX = prompt("Introduceti numarul exercitiului :");
+	switch (NREX){
+		case "1":var a = prompt("Introduceti primul numar:");
+			var b = prompt("Introduceti al 2-lea numar:");
+			var c = prompt("Introduceti al 3-lea numar:");
+			sum = parseInt(a)+parseInt(b)+parseInt(c);
+			if((!isNaN(a))&&(!isNaN(b))&&(!isNaN(c))){
+			document.write("Rezultatul sumei a celor 3 numere introduse este: ",sum);
+		}else{
+			document.write("Nu se poate efectua suma.")
+		}
+		break;
+
+		case "2":
+		var n = prompt("Introduceti un numar intre 1 si 10:");
+		var i=1;
+		if (n<1||n>10){
+			document.write("Nu se poate efectua afisarea.");
+		}else{
+			document.write("Numerele de la 1 la ",n ," sunt urmatoarele: ");
+			while(i<=n){
+				document.write(i," ");
+				i++;
+			}
+		}
+		break;
+
+		case "3":
+		var DataN= prompt("Introduceti in ce an v-ati nascut:");
+		var DataC=2017;
+		var varsta=DataC-parseInt(DataN);
+		document.write("Aveti ",varsta,"/",varsta-1," ani.");
+		break;
+
+		case "4":
+		var Luna = prompt("Exercitiul 4 si 5 sunt facute aici amandoua.Introduceti luna in care v-ati nascut");
+			switch(Luna){
+			case "1":
+				document.write("Ianuarie sau Ienaiu este prima lună a anului în calendarul Gregorian și una dintre cele șapte luni gregoriene cu o durată de 31 de zile.");
+				break;
+			case "2":
+				document.write("Februarie este a doua lună a anului în calendarul Gregorian. Este cea mai scurtă lună gregoriană, care are numai 28 sau 29 de zile. Luna are 29 de zile în anii bisecți; în ceilalți ani, luna februarie are 28 de zile.");
+				break;
+			case "3":
+				document.write("Martie este a treia lună a anului în calendarul Gregorian și una dintre cele șapte luni gregoriene cu o durată de 31 de zile.");
+				break;
+			case "4":
+				document.write("Aprilie sau prier este a patra lună a anului în calendarul gregorian și una dintre cele patru luni gregoriene cu o durată de 30 de zile.");
+				break;
+			case "5":
+				document.write("Mai sau Florar este a cincea lună a anului în calendarul Gregorian și una dintre cele șapte luni gregoriene cu o durată de 31 de zile.");
+				break;
+			case "6":
+				document.write("Iunie este a șasea lună a anului în calendarul Gregorian și una dintre cele patru luni gregoriene.");
+				break;
+			case "7":
+				document.write("Iulie sau Cuptor este a șaptea lună a anului în calendarul Gregorian și una dintre cele șapte luni gregoriene cu o durată de 31 de zile.");
+				break;
+			case "8":
+				document.write("August este a opta lună a anului în calendarul Gregorian și una dintre cele șapte luni gregoriene cu o durată de 31 de zile.");
+				break;
+			case "9":
+				document.write("Septembrie este a noua lună a anului în calendarul Gregorian și una dintre cele patru luni gregoriene cu o durată de 29 de zile.");
+				break;
+			case "10":
+				document.write("Octombrie este a zecea lună a anului în calendarul Gregorian și una dintre cele șapte luni gregoriene cu o durată de 31 de zile.");
+				break;
+			case "11":
+				document.write("Noiembrie este 11-a lună a anului în calendarul gregorian și una dintre cele patru luni gregoriene cu o durată de 30 de zile.");
+				break;
+			case "12":
+				document.write("Decembrie este a 12-a lună a anului în calendarul Gregorian și una dintre cele șapte luni gregoriene cu o durată de 31 de zile.");
+				break;
+			default:
+				document.write("Anul are doar 12 luni.");
+				break;
+			}
+			break;
+
+	}
+</script>
+</div>
+</body>
+</html>
