@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	div{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	background-color: grey;
+	font-size: 20px;
+	}
+	#Para{
+	padding: 10px 10px 10px 10px;
+	background-color: yellow;
+	border:  9px orange solid;
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	border-width: 20px;
+	border-bottom-width: 5px;
+	color:black;
+	text-align: center;
+	}
+	.id0 {
+	padding: 20px 20px 20px 20px;
+	border:  10px black solid;
+	margin-top: 20px;
+	margin-left: 30px;
+	margin-bottom: 20px;
+	border-width: 10px;
+	border-bottom-width: 5px;
+	color:lightblue;
+	}
+	.dropbtn1{
+	background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	}
+	.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	}
+	.id1 {
+
+	}
+	.id2 {
+
+	}
+	.id3 {
+
+	}
+	.id4 {
+
+	}
+	.dropdown {
+    position: relative;
+    display: inline-block;
+	}
+
+	.dropdown-content {
+	color:black;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+	}
+
+	.dropdown:hover .dropdown-content {
+    display: block;
+	}
+	.titlu{
+		font-size: 35px;
+		font-weight: bold;
+	}
+</style>
+
+<title>LAB5</title>
+</head>
+<body>
+	<div class="id0" id="id0">
+	<label class="titlu">Selectati nivelul dorit</label>
+	<br>
+	<div class="dropdown" >
+	<button onclick="myFunction()" class="dropbtn" align="center">Dropdown</button>
+		<div class="dropdown-content">
+			<p id="id1" onclick="function1()">Nivel 1</p>
+			<p id="id2" onclick="function2()">Nivel 2</p>
+			<p id="id3" onclick="function1()">Nivel 3</p>
+			<p id="id4" onclick="function4()">Nivel 4*</p>
+			<p id="id5" onclick="function5()">Nivel 5**</p>
+		</div>
+	</div>
+	<p font-size=15px>Este recomandat sa reincarcam pagina dupa ce rezolvam/incercam 1 exercitiu</p>
+	<input type="button" class="dropbtn1" value="Clear" onClick="window.location.reload()">
+	<h2 onclick="this.style.color = 'pink'" id="test1"></h2>
+	<h2 onclick="this.style.color = 'black'" id="test2"></h2>
+	<h2 id="test3"></h2>
+	<h2 id="test4"></h2>
+	<label id="test5"></label>
+	</div>
+
+
+<script>
+	var enunt=["Scrieti un program care cere salariul anual si calculeaza salariul lunar","Scrieti un program care transforma grade Fahrenheit in Celsius (1 grad Fahrenheit = -17.22 grade Celsius).Programul cere gradele Fahrenheit si le transforma in Celsius)","Scrieti un program care transforma miles in km (1 mile = 1.609344 kilometri). Programul cere distanta in miles si o transforma in kilometri.]","Folositi Exemplul 1 - events ca sa schimbati culoarea primului text in roz si al doilea in gri cand se da ”click”","Folositi Exemplul 1 – events ca sa scimbati textul al doilea in ”Hello World” in loc de data – onmouseleave","Adaugati un event onmouseleave la primul text sa schimbe textul inapoi la ”Apasa-ma”"] ;
+	var Ftest= false;
+	var exAles= false;
+	function myFunction() {
+    	document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	function function1(){
+		if (Ftest){
+			alert("Press the clear button");
+			return;
+		}else{
+			Ftest= true;
+			document.getElementById("test1").innerHTML="Alegeti exercitiul:";
+
+			var b = document.createElement("BUTTON");
+			b.setAttribute("Id","10");
+			b.innerHTML = "Select";
+
+			var x = document.createElement("INPUT");
+    		x.setAttribute("type", "number");
+    		x.setAttribute("id","input1")
+    		x.setAttribute("value", "1");
+
+    		document.getElementById("id0").appendChild(x);
+    		document.getElementById("id0").appendChild(b);
+
+    		var b11= document.getElementById("10");
+
+    		b11.addEventListener("click",function(){
+    			var a = document.getElementById("input1").value;
+    			switch (a){
+    				case "1":
+    					if (exAles){
+							alert("Press the clear button");
+							return;
+						}else{
+							exAles=true;
+    					var c = document.createElement("p");
+    					c.innerHTML=enunt[0];
+
+    					var b1 = document.createElement("BUTTON");
+						b1.setAttribute("Id","11");
+						b1.innerHTML = "Calculeaza";
+
+    					var x1 = document.createElement("INPUT");
+    					x1.setAttribute("type", "number");
+    					x1.setAttribute("id","rezImput1")
+    					x1.setAttribute("value", "1");
+
+    					var rez = document.createElement("p");
+    					rez.setAttribute("id","rez1");
+    						document.getElementById("id0").appendChild(c);
+    						document.getElementById("id0").appendChild(x1);
+    						document.getElementById("id0").appendChild(b1);
+    					b1.addEventListener("click",function(){
+    						document.getElementById("id0").appendChild(rez);
+    						document.getElementById("rez1").innerHTML=Nivel1Ex1(x1.value);
+    					})}
+    					break;
+
+
+    					case "2":
+    					if (exAles){
+							alert("Press the clear button");
+							return;
+						}else{
+							exAles=true;
+    						var c = document.createElement("p");
+    					c.innerHTML=enunt[1];
+
+    					var b1 = document.createElement("BUTTON");
+						b1.setAttribute("Id","11");
+						b1.innerHTML = "Calculeaza";
+
+    					var x1 = document.createElement("INPUT");
+    					x1.setAttribute("type", "number");
+    					x1.setAttribute("id","rezImput1")
+    					x1.setAttribute("value", "1");
+
+    					var rez = document.createElement("p");
+    					rez.setAttribute("id","rez1");
+    						document.getElementById("id0").appendChild(c);
+    						document.getElementById("id0").appendChild(x1);
+    						document.getElementById("id0").appendChild(b1);
+    					b1.addEventListener("click",function(){
+    						document.getElementById("id0").appendChild(rez);
+    						document.getElementById("rez1").innerHTML=Nivel1Ex2(x1.value);
+
+    					var rld = document.createElement("BUTTON");
+    					})}
+    					break;
+
+    					case "3":
+    					if (exAles){
+							alert("Press the clear button");
+							return;
+						}else{
+							exAles=true;
+    					var c = document.createElement("p");
+    					c.innerHTML=enunt[2];
+
+    					var b1 = document.createElement("BUTTON");
+						b1.setAttribute("Id","11");
+						b1.innerHTML = "Calculeaza";
+
+    					var x1 = document.createElement("INPUT");
+    					x1.setAttribute("type", "number");
+    					x1.setAttribute("id","rezImput1")
+    					x1.setAttribute("value", "1");
+
+    					var rez = document.createElement("p");
+    					rez.setAttribute("id","rez1");
+    						document.getElementById("id0").appendChild(c);
+    						document.getElementById("id0").appendChild(x1);
+    						document.getElementById("id0").appendChild(b1);
+    					b1.addEventListener("click",function(){
+    						document.getElementById("id0").appendChild(rez);
+    						document.getElementById("rez1").innerHTML=Nivel1Ex3(x1.value);
+    					})}
+    				}
+    			})
+		}
+	}
+	function function2(){
+		if (Ftest){
+			alert("Press the clear button");
+			return;
+		}else{
+			Ftest= true;
+			document.getElementById("test1").innerHTML="Alegeti exercitiul:";
+
+			var b = document.createElement("BUTTON");
+			b.setAttribute("Id","10");
+			b.innerHTML = "Select";
+
+			var x = document.createElement("INPUT");
+    		x.setAttribute("type", "number");
+    		x.setAttribute("id","input1")
+    		x.setAttribute("value", "1");
+
+    		document.getElementById("id0").appendChild(x);
+    		document.getElementById("id0").appendChild(b);
+
+    		var b11= document.getElementById("10");
+
+    		b11.addEventListener("click",function(){
+    			var a = document.getElementById("input1").value;
+    			switch (a){
+    				case "1":
+    				if (exAles){
+							alert("Press the clear button!");
+							return;
+						}else{
+							exAles=true;
+    						var c = document.createElement("p");
+    						c.innerHTML=enunt[3];
+    						document.getElementById("id0").appendChild(c);
+    						var p1 = document.createElement("p");
+    						var p2 = document.createElement("p");
+    						p1.setAttribute("onclick","onclick=this.style.color = 'pink'");
+    						p1.innerHTML="Apasa-ma!(1)";
+    						document.getElementById("id0").appendChild(p1);
+    						p2.setAttribute("onclick","onclick=this.style.color = 'grey'");
+    						p2.innerHTML="Apasa-ma!(2)";
+    						document.getElementById("id0").appendChild(p2);
+
+
+						}
+						break;
+
+
+						case "2":
+						if (exAles){
+							alert("Press the clear button");
+							return;
+						}else{
+							exAles=true;
+    						var c = document.createElement("p");
+    						c.innerHTML=enunt[4];
+    						document.getElementById("id0").appendChild(c);
+    						var p1 = document.createElement("p");
+    						p1.innerHTML="Hi World!"
+    						p1.setAttribute("id","Para");
+    						p1.setAttribute("onmouseout","onmouseout=this.innerHTML ='Hello World'");
+    						p1.setAttribute("onmouseover","onmouseover=this.innerHTML ='Hi World!'")
+    						document.getElementById("id0").appendChild(p1);
+						}
+						break;
+
+
+						case "3":
+						if (exAles){
+							alert("Press the clear button");
+							return;
+						}else{
+							exAles=true;
+    						var c = document.createElement("p");
+    						c.innerHTML=enunt[5];
+    						document.getElementById("id0").appendChild(c);
+    						var p1 = document.createElement("p");
+    						p1.innerHTML="Hi World!"
+    						p1.setAttribute("id","Para");
+    						p1.setAttribute("onclick","onClick=OnClk(this) ='Hello World'");
+    						p1.setAttribute("onmouseleave","onmouseleave=OnLeave(this) ='Apasa-ma'")
+    						document.getElementById("id0").appendChild(p1);
+						}
+
+				}
+			})
+		}
+	}	
+	function Nivel1Ex1(val){
+		var a=12;
+		var n=(val/a);
+		return n;
+	}
+	function Nivel1Ex2(val){
+		var fTemp = val;
+ 		var fToCel = (fTemp - 32) * 5 / 9;
+		return fToCel;
+	}
+	function Nivel1Ex3(val){
+		var Miles=val;
+		var MilesToKm= Miles * 1.609344;
+		return MilesToKm;
+	}
+
+	function Nivel2Ex1(val){
+		retun;
+	}
+
+	function OnClk(id){
+		id.innerHTML = "Hello World";
+	}
+	function OnLeave(id){
+		id.innerHTML = "Apasa-ma"
+	}
+	function reload(){
+
+	}
+
+	function function4(){
+		/*if (Ftest){
+			alert("Press the clear button");
+			return;
+		}else{
+			Ftest= true;
+			var btn = document.createElement("Button");
+			btn.setAttribute("style","align:center");
+			btn.innerHTML="Generate Options";
+			btn.addEventListener("click",function(){
+				generate_table();
+			});
+			document.getElementById("id0").appendChild(btn);
+
+	*/
+	alert("Inca nu am ajuns aici.");	
+	}
+
+	function function5(){
+		alert("Nici aici.");
+	}
+	function returnColor(id){
+		
+	}
+
+function generate_table() {
+	var c=0;
+	var red=[0,1638400,3342336,4980736,6684672,8323072,990000,8323072,13369344,15007744,16711680,16718105,16724530,16718105,16724530,16731212,16737894,16744319,16751001,16757426];
+	var blue=[];
+	var green=[];
+  	var body = document.getElementById("id0")[0];
+  	var tbl = document.createElement("table");
+  	var tblBody = document.createElement("tbody");
+  	var CSelect1 = document.createElement("Button");
+ 	 var CSelect2 = document.createElement("Button");
+ 	 var CSelect3 = document.createElement("Button");
+ 	 CSelect1.innerHTML="RED";
+ 	 CSelect2.innerHTML="BLUE";
+	  CSelect3.innerHTML="GREEN";
+	  CSelect1.addEventListener("click",function(){
+	 	c=1;
+	  })
+	  CSelect2.addEventListener("click",function(){
+	  	c=2;
+	  })
+	  CSelect3.addEventListener("click",function(){
+  	c=3;
+	  })
+	  document.getElementById("id0").appendChild(CSelect1);
+	  document.getElementById("id0").appendChild(CSelect2);
+ 	  document.getElementById("id0").appendChild(CSelect3);
+ 	for (var i = 0; i < 20; i++) {
+ 		console.log("1");
+		var row = document.createElement("tr");
+    	var cell = document.createElement("td");
+    	var cellText = document.createElement("p");
+    	switch (c){
+    		case 1:
+    			console.log("1	");
+    			cell.setAttribute("style","background-color:"+"#"+red[i].toString(16))
+    	}
+    	cell.appendChild(cellText);
+		row.appendChild(cell);
+    }
+    tblBody.appendChild(row);
+  	
+  	tbl.appendChild(tblBody);
+  	body.appendChild(tbl);
+  	tbl.setAttribute("border", "2");
+}
+</script>
+<table id="colorTable" style="width:100%;">
+<tbody>
+</tbody>
+</table>
+</body>
+</html>
