@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	div{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	background-color: grey;
+	font-size: 20px;
+	}
+	#Para{
+	padding: 10px 10px 10px 10px;
+	background-color: yellow;
+	border:  9px orange solid;
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	border-width: 20px;
+	border-bottom-width: 5px;
+	color:black;
+	text-align: center;
+	}
+	.id0 {
+	padding: 20px 20px 20px 20px;
+	border:  10px black solid;
+	margin-top: 20px;
+	margin-left: 30px;
+	margin-bottom: 20px;
+	border-width: 10px;
+	border-bottom-width: 5px;
+	color:lightblue;
+	}
+	.dropbtn1{
+	background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	}
+	.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	}
+	.id1 {
+
+	}
+	.id2 {
+
+	}
+	.id3 {
+
+	}
+	.id4 {
+
+	}
+	.dropdown {
+    position: relative;
+    display: inline-block;
+	}
+
+	.dropdown-content {
+	color:black;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+	}
+
+	.dropdown:hover .dropdown-content {
+    display: block;
+	}
+	.titlu{
+		font-size: 35px;
+		font-weight: bold;
+	}
+</style>
+
+<title>EXLAB6</title>
+</head>
+<body>
+	<p align="center">EX LAB 6</p>
+	<script>
+		var NIVEL = prompt("Introduceti nivelul dorit EX SUPILMENTARE = nivel 4:");
+		switch (NIVEL){
+			case "1":
+			var a = prompt("Introduceti numarul exercitiului");
+			switch (a){
+				case "1":
+					n1e1();
+					break;
+		
+				case "2":
+					n1e2();
+					break;
+
+				case "3":
+					n1e3();
+					break;
+
+				case "4":
+					n1e4();
+					break;
+				case "5":
+					n1e5();
+					break;
+				case "6":
+					n1e6();
+					break;
+				case "7":
+					n1e7();
+					break;
+				default:
+					alert("Nivelul 1 are doar 7 exercitii!");
+					break;
+			}
+				break;
+
+			case "2":
+					var a = prompt("Introduceti numarul exercitiului");
+					switch (a){
+						case "1":
+						n2e1();
+						break;
+		
+						case "2":
+							n2e2();
+						break;
+
+						case "3":
+						n2e3();
+						break;
+
+						case "4":
+						n2e4();
+						break;
+						default:
+						alert("Nivelul 2are doar 4 exercitii!");
+					break;
+					}
+
+				break;
+				case "3":
+				var a = prompt("Introduceti numarul exercitiului");
+					switch (a){
+						case "1":
+							n3e1();
+						break;
+		
+						case "2":
+							n3e2();
+						break;
+						default:
+					alert("Nivelul 3 are doar 2 exercitii!");
+					break;
+					}
+				break;
+
+				case "4":
+					var a = prompt("Introduceti numarul exercitiului suplimentar:");
+					switch (a){
+						case "1":
+							var b1=prompt("Introduceti o latura");
+							var b2=prompt("Introduceti cealalta latura:");
+							n4e11(b1,b2);
+							document.write("<br/>");
+							n4e12(b1,b2);
+							break;
+						case "2":
+							var x = Math.floor((Math.random() * 10) + 1);
+    						n4e2(x);
+    						break;
+
+						case "3":
+							n4e3();
+							break;
+
+						case "4":
+							n4e4();
+							break;
+						case "5":
+							n4e5();
+							break;
+						default:
+							alert("Nivelul 4 are doar 5 exercitii.");
+							break;
+					}
+
+		}
+
+	function n1e1(){
+		var b=prompt("Introduceti un numar:");
+		if(b<0){
+			document.write("Numarul este negativ");
+		}else{
+			document.write("Numaul este pozitiv");
+		}
+	}
+	function n1e2(){
+		var b=prompt("Introduceti un numar:");
+		b=parseInt(b);
+		if(b<10){
+			b+=5;
+			document.write("Numarul este :"+b);
+		}else if(b>10){
+			b-=3;
+			document.write("Numarul este :"+b);
+		}else{
+			document.write("Numarul este :"+b);
+		}
+	}
+	function n1e3(){
+		var b = prompt("Introduceti o litera: ");
+		if (b=="z"){
+			document.write("ZZZZZZZZ");
+		}else{
+			document.write(b);
+		}
+
+	}
+	function n1e4(){
+		for(i=7;i<16;i++){
+			document.write(i+" ");
+		}
+	}
+
+	function n1e5(){
+		var b=prompt("Care este culoarea dumneavoastra preferata ?");
+		document.write("Culoarea ta preferata este: "+b);
+	}
+
+	function n1e6(){
+		var b1=prompt("Introduceti primul numar:");
+		var b2=prompt("Introduceti al 2-lea numar:");
+		if (b1==0 || b2==0){
+			document.write("Nu se poate face produsul.")
+		}else{
+		var c= parseInt(b1) * parseInt(b2);
+		document.write("Produsul celor 2 numere este "+c);
+	}
+	}
+
+	function n1e7(){
+		var b1=prompt("Introduceti primul numar:");
+		var b2=prompt("Introduceti al 2-lea numar:");
+		var b3=prompt("Introduceti al 3-lea numar:");
+		if (b1==0 || b2==0 || b3==0){
+			document.write("Nu se poate face produsul.")
+		}else{
+		var c= parseInt(b1) * parseInt(b2) * parseInt(b3);
+		document.write("Produsul celor 3 numere este "+c);
+		}
+	}
+
+	function n2e1(){
+		var sum = 0;
+		sum = parseInt(sum);
+		for (i=1;i<=10;i++){
+			sum+=parseInt(i);
+		}
+		document.write("Suma numerelor naturale de la 1 la 10 este: "+sum);
+	}
+	function n2e2(){
+		var b1=prompt("Introduceti primul numar:");
+		var b2=prompt("Introduceti al 2-lea numar:");
+		b1=parseInt(b1);
+		b2=parseInt(b2);
+		if (b2<b1){
+			var aux=b2;
+			aux=parseInt(aux);
+			b2=b1;
+			b1=aux;
+		}
+		var c=0;
+		while (b1!=0){
+			c= parseInt(b1%10);
+			b2+=c;
+			b1=parseInt(b1/10);
+		}
+		document.write("Rezultatul este "+b2);
+	}
+
+	function n2e3(){
+		for(i=10;i>=1;i--){
+			document.write(i+" ");
+		}
+	}
+
+	function n2e4(){
+		for(i=10;i>=1;i--){
+			if (i%2==0){
+			document.write(i+" ");
+			}
+		}
+	}
+
+	function n3e1(){
+		for (i=1;i<=4;i++){
+			for(j=11;j<=20;j++){
+				document.write(j+" ");
+			}
+			document.write("<br/>");
+		}
+	}
+
+		function n3e2(){
+			var k=-10;
+		for (i=1;i<=4;i++){
+			k+=10;
+			for(j=11;j<=20;j++){
+				document.write(k+j+" ");
+			}
+			document.write("<br/>");
+		}
+	}
+
+
+	//NIVEL 4 ex suplimentare
+	function n4e11(a,b){
+		a=parseInt(a);
+		b=parseInt(b);
+		document.write("Aria este "+a*b);
+	}
+	function n4e12(a,b){
+		a=parseInt(a);
+		b=parseInt(b);
+		document.write("Preimentrul este "+2*a+2*b);
+	}
+
+	function n4e2(z){
+		var ghicit = false;
+		while (!ghicit){
+			var b = prompt("Introduceti un numar intre 1 si 10");
+			if (b<z){
+				alert("Mai mic.");
+			}else if (b>z){
+				alert("Mai mare.");
+			}else {
+				ghicit=true;
+				alert("Ati ghicit numarul, acesta fiind: "+z);
+			}
+		}
+	}
+
+	function n4e3(){
+		var afis="#";
+		for(i=1;i<=5;i++){
+			for(j=1;j<=10;j++){
+				document.write(afis+" ");
+			}
+			document.write("<br/>");
+		}
+	}
+
+	function n4e4(){
+		var nC= prompt("Introduceti numarul de coloane:");
+		var nR= prompt("Introduceti numarul de Randuri:");
+		for(i=1;i<=nR;i++){
+			for(j=1;j<=nC;j++){
+				document.write("#");
+			}
+			document.write("<br/>");
+		}
+	}
+
+	function n4e5(){
+		var rand=prompt("Introduceti numarul de randuri");
+		for(i=1;i<=rand;i++){
+			for(j=1;j<=i;j++){
+				document.write(j+" ");
+			}
+			document.write("<br/>");
+		}
+	}
+	</script>
+</body>
+</html>
