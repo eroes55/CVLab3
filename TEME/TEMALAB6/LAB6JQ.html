@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	var apasa = 0;
+
+	$(document).ready(function(){
+		var cerc = $("#cerc");
+		var btn2 = $("#button2");
+		btn2.fadeOut();
+		var randomPoz = 0;
+		cerc.fadeOut();
+		$("#flip").click(function(){
+			var p=$("#panel");
+			$("#panel").fadeToggle("slow");
+			var btn = $("#button");
+			btn.click(function(){
+				btn2.fadeIn();
+				p.css("background-color","white");
+				btn.hide();
+				cerc.fadeIn("2000");
+				cerc.click(function(){
+					apasa++;
+					$('#scor').fadeOut(500, function() {
+    					$(this).html(apasa).fadeIn(500);
+					});
+						cerc.hide();
+					randomPoz=Math.floor(Math.random() * 700) - 300;
+					cerc.css("left",randomPoz+'px');
+					cerc.delay("500").fadeIn("200");
+				btn2.click(function(){
+					apasa=0;
+					cerc.fadeOut();
+					p.css("background-color","#e5eecc")
+					btn.fadeIn();
+
+				})
+				});
+			});
+		});
+	});
+
+	</script>
+	<title>LAB6</title>
+	<style> 
+
+#panel, #flip,#inbwt {
+    padding: 5px;
+    text-align: relative;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 400px;
+    display: none;
+}
+#button{
+	background-color: lightgreen;
+	padding: 5px;
+	align-content: center;
+	text-align: center;
+	font-weight: bold;
+}
+
+#button2{
+	background-color: red;
+	padding: 5px;
+	align-content: center;
+	text-align: center;
+	font-weight: bold;
+}
+#cerc{
+	position:relative;
+	animation: mymove 6s;
+    animation-fill-mode: forwards;
+    vertical-align: bottom;
+}
+
+@keyframes mymove{
+	from{bottom:-250px;}
+	to {bottom:300px;}
+}
+
+</style>
+</head>
+<body id = "0">
+<div id="flip">Click on meh, Ai apasat de:<p id="scor"></p></div>
+<div id="inbwt">
+<button id="button" text-align="center">Start</button>
+<button id="button2" align = "bottom" text-align="center">Stop</button>
+</div>
+<div id="panel">
+<svg id = "cerc" height="100" width="100">
+  <circle id = "cerc" cx="50" cy="50" r="40" stroke="black" stroke-width="12" fill="grey" />
+  Sorry, your browser does not support inline SVG.  
+</svg> 
+<br>
+
+	</div>
+</body>
+</html>
