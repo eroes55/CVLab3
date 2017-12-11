@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	Tema</title>
+	<style>
+	.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+	}
+
+	.tooltip .tooltiptext {
+	    visibility: hidden;
+	    width: 120px;
+	    background-color: black;
+	    color: #fff;
+	    text-align: center;
+	    border-radius: 6px;
+	    padding: 5px 0;
+	    position: absolute;
+	    z-index: 1;
+	}
+
+	.tooltip:hover .tooltiptext {
+	    visibility: visible;
+}
+	</style>
+</head>
+<body>
+		<form action="TemaLab12.php" method="POST">
+			<h2>Avem un singur cont.</h2>
+				<div class="tooltip">
+					Introduceti comanda dorita (mouseover pentrumai multe detalii):
+						<span class="tooltiptext">
+							Avem 3 comenzi<br>
+							1:Inspectarea contului<br>
+							2:Depozitare in Cont<br>
+							3:Extragere sold<br>
+						</span>
+					</div>
+					<input type="text" name="Command"><br>
+				<div class="tooltip">
+					Introduceti o valoare (mouseover pentru mai multe detalii):
+						<span class="tooltiptext">
+							Pentru comanda 1 avem 3 valori:<br>
+							1:administrator 2:utilizator 3:strain<br>
+							Pentru comanda 2 si 3 se cere o suma de bani<br>
+						</span>
+					</div>
+					<input type="text" name="Value"><br>
+			<input type="submit">
+</body>
+</html>
